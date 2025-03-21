@@ -12,6 +12,6 @@ jobs:
         with:
           version: 1.0.0
           url: docker.io/calculi-corp/gha-action/test-artifact-gha-01:latest
-          digest: sha256:a0a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
+          digest: sha256:a2a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
           target-environment: Production
-          name: gha-artifact-01
+          name: gha-artifact-test-02
