@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Run My Custom Go Action
-        uses: cloudbees-gha-cbp/register-build-artifact@v1
+        uses: cloudbees-gha-cbp/register-build-artifact@main
         id: go-action
         with:
           name: "gha-artifact-test-02"
