@@ -21,5 +21,5 @@ jobs:
           url: "docker.io/calculi-corp/gha-action/gha-artifact-01:latest"
           digest: "sha256:a0a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2"
           type: "docker"
-          cloudbees-url: "https://api.cloudbees.io"
-          cloudbees-pat: ${{ secrets.CBP_PROD_PAT }}
+          cloudbees-url: "https://api.saas-preprod.beescloud.com"
+          cloudbees-pat: ${{ secrets.CBP_PAT }}
