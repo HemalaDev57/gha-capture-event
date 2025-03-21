@@ -15,16 +15,16 @@ jobs:
         kind: build
         uses: cloudbees-io/register-build-artifact@v1
         with:
-          name: cbp-artifact-01
+          name: cbp-artifact-001
           version: 1.0.0
           url: docker.io/artifact/cbp:1.0.0
-          digest: sha256:10a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
+          digest: sha256:11a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
       - name: Publish deploy  artifact
         kind: deploy
         uses: cloudbees-io/register-deployed-artifact@v1
         with:
-          name: cbp-artifact-01
+          name: cbp-artifact-001
           version: 1.0.0
           url: docker.io/artifact/cbp:1.0.0
-          digest: sha256:10a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
+          digest: sha256:11a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
           target-environment: Production
