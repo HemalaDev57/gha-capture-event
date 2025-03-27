@@ -10,8 +10,8 @@ jobs:
         kind: deploy
         uses: cloudbees-io/register-deployed-artifact@v1
         with:
-          name: gha-artifact-test
+          name: gha-artifact-test-001
           version: 1.0.0
-          url: docker.io/calculi-corp/gha-action/gha-test-artifact:latest
-          digest: sha256:a1a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
+          url: docker.io/calculi-corp/gha-action/gha-test-artifact-001:latest
+          digest: sha256:a1a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb3
           target-environment: Production
