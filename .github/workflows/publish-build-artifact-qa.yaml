@@ -1,4 +1,4 @@
-name: GHA Action Build Artifact Publish Workflow
+name: QA - GHA Build Artifact Publish Workflow
 
 on:
   workflow_dispatch:
