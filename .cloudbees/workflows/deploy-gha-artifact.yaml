@@ -4,14 +4,14 @@ name: My workflow
 on:
   workflow_dispatch:
 jobs:
-  build:
+  deploy:
     steps:
       - name: Say hello
         kind: deploy
         uses: cloudbees-io/register-deployed-artifact@v1
         with:
-          name: test-artifact-002
           version: 1.0.0
           url: docker.io/calculi-corp/gha-action/test-artifact-002:latest
           digest: sha256:a2a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb1
           target-environment: QA
+          name: test-artifact-002
