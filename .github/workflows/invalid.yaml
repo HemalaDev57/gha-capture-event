@@ -1,4 +1,4 @@
-name: QA - GHA Build Artifact Publish Workflow
+name: QA - Invalid case - GHA Build Artifact Publish Workflow
 
 on:
   workflow_dispatch:
