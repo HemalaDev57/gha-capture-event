@@ -13,10 +13,10 @@ jobs:
         uses: cloudbees-gha-cbp/register-build-artifact@main
         id: go-action
         with:
-          name: "test-artifact-001"
+          name: "test-artifact-002"
           version: 1.0.0
-          url: "docker.io/calculi-corp/gha-action/test-artifact-001:latest"
-          digest: "sha256:a1a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb1"
+          url: "docker.io/calculi-corp/gha-action/test-artifact-002:latest"
+          digest: "sha256:a2a123ee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb1"
           type: "docker"
           cloudbees-url: "https://api.saas-qa.beescloud.com"
           cloudbees-pat: ${{ secrets.CBP_QA_PAT }}
