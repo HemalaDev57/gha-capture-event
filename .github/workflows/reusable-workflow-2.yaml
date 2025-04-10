@@ -1,0 +1,37 @@
+name: Reusable Workflow - 2
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node.js version to use
+        required: false
+        default: '18'
+        type: string
+      run-tests:
+        description: Run tests
+        required: false
+        default: true
+        type: boolean
+    secrets:
+      TOKEN:
+        required: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '${{ inputs.node-version }}'
+      - name: Install Dependencies
+        run: |
+          echo "npm install"
+          sleep 25
+  trigger:
+    uses: ./.github/workflows/reusable-wf.yaml
+    with:
+      run-tests: true
+    secrets:
+      TOKEN: '${{ secrets.GITHUB_TOKEN }}'
