@@ -1,6 +1,8 @@
 name: PREPROD - GHA Build Artifact Publish Workflow
 
 on:
+  push:
+    branches: "master"
   workflow_dispatch:
   
 jobs:
