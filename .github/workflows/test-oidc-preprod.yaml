@@ -16,9 +16,9 @@ jobs:
       - name: Run My Custom Go Action
         uses: HemalaDev57/TestAction@master
         with:
-          name: "oidc-validation-artifact"
+          name: "oidc-artifact-preprod"
           version: 1.0.0
-          url: "ghcr.io/hemaladev57/testaction/custom-action:latest"
+          url: "ghcr.io/hemaladev57/testaction/preprod-artifact:latest"
           digest: "sha256:566b1117a16243a43be01e378a20ee823c95d00cd5f3231ad4d168f53d99d9d8"
           type: "docker"
           cloudbees-url: "https://api.saas-preprod.beescloud.com"
