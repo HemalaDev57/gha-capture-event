@@ -12,8 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Run My Custom Go Action
-        uses: HemalaDev57/TestAction@master
-        # uses: cloudbees-gha-cbp/register-build-artifact@main
+        # uses: HemalaDev57/TestAction@master
+        uses: cloudbees-gha-cbp/register-build-artifact@v1
         id: go-action
         with:
           name: "gha-artifact-test-003"
