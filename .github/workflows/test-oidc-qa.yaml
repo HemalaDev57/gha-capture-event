@@ -1,4 +1,4 @@
-name: PREPROD - OIDC build artifact
+name: QA - OIDC build artifact
 
 on:
   workflow_dispatch:
