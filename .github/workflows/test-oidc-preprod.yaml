@@ -1,4 +1,4 @@
-name: Test My Go Action
+name: PREPROD - OIDC build artifact
 
 on:
   workflow_dispatch:
