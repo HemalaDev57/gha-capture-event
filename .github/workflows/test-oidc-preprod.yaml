@@ -25,4 +25,4 @@ jobs:
           type: "docker"
           cloudbees-url: "https://api.saas-preprod.beescloud.com"
       - name: Test output
-        run: echo '{{$steps.artifact.outputs.artifact_id}}'
+        run: echo '${{ steps.artifact.outputs.artifact_id }}'
