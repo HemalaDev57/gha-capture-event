@@ -14,7 +14,8 @@ jobs:
 
       - name: Run My Custom Go Action
         id: artifact
-        uses: ./
+        uses: cloudbees-io-gha/register-build-artifact@v3
+        # uses: ./
         with:
           name: "oidc-artifact-prod"
           version: 1.0.0
@@ -22,6 +23,3 @@ jobs:
           digest: "sha256:566b1117a16243a43be01e378a20ee823c95d00cd5f3231ad4d168f53d99d9d8"
           type: "docker"
           label: 'qa,prod'
-          
-      # - name: Test output
-      #   run: echo '${{ steps.artifact.outputs.artifact_id }}'
