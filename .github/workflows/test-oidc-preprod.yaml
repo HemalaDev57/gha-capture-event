@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run My Custom Go Action
-        uses: HemalaDev57/TestAction@master
+        uses: ./
+        # uses: HemalaDev57/TestAction@master
         with:
           name: "oidc-artifact-preprod"
           version: 1.0.0
