@@ -3,6 +3,7 @@ description: 'Report artifact data and version produced by a GHA workflow run to
 branding:
   icon: 'command'
   color: 'purple'
+
 inputs:
   cloudbees-url:
     description: 'The CloudBees platform URL.'
@@ -28,12 +29,13 @@ inputs:
     required: false
   label:
     description: 'The list of label of the artifact.'
+    
 outputs:
   artifact_id:
     description: "The Id of registered artifact"
+    
 runs:
   using: "docker"
-  # image: "docker://ghcr.io/haakaashbee/gha-action/gha-register-build-artifact-action:latest"
   image: "docker://ghcr.io/haakaashbee/gha-action/gha-register-build-artifact-action:latest"
   env:
     CLOUDBEES_API_URL: ${{ inputs.cloudbees-url }}
