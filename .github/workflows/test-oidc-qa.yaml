@@ -21,7 +21,7 @@ jobs:
           digest: "sha256:566b1117a16243a43be01e378a20ee823c95d00cd5f3231ad4d168f53d99d9d8"
           type: "docker"
           cloudbees-url: "https://api.saas-qa.beescloud.com"
-          label: 'preprod'
+          label: 'qa,prod'
           
       - name: Test output
         run: echo '${{ steps.artifact.outputs.artifact_id }}'
