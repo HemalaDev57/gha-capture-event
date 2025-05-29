@@ -25,4 +25,4 @@ jobs:
           label: 'qa,prod'
           
       - name: Test output
-        run: echo '${{ steps.artifact.outputs.artifact_id }}'
+        run: echo '${{ steps.artifact.outputs.cbp_artifact_id }}'
