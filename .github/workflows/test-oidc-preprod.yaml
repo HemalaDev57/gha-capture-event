@@ -1,7 +1,6 @@
 name: PREPROD - OIDC build artifact
 
-on:
-  workflow_dispatch:
+on: [workflow_dispatch]
   
 jobs:
   run-go-action:
@@ -16,7 +15,6 @@ jobs:
       - name: Run My Custom Go Action
         id: artifact
         uses: ./
-        # uses: HemalaDev57/TestAction@master
         with:
           name: "oidc-artifact-preprod"
           version: 1.0.0
@@ -24,5 +22,7 @@ jobs:
           digest: "sha256:566b1117a16243a43be01e378a20ee823c95d00cd5f3231ad4d168f53d99d9d8"
           type: "docker"
           cloudbees-url: "https://api.saas-preprod.beescloud.com"
+          label: 'preprod'
+          
       - name: Test output
         run: echo '${{ steps.artifact.outputs.artifact_id }}'
