@@ -19,7 +19,7 @@ jobs:
         with:
           name: "oidc-artifact-prod"
           version: 1.0.0
-          url: "ghcr.io/hemaladev57/testaction/prod-artifact:latest"
+          url: "ghcr.io/hemaladev57/testaction/prod-artifact:DEMO"
           digest: "sha256:566b1117a16243a43be01e378a20ee823c95d00cd5f3231ad4d168f53d99d9d8"
           type: "docker"
-          label: 'qa,prod'
+          label: 'demo,verified'
