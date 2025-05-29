@@ -34,7 +34,8 @@ outputs:
 runs:
   using: "docker"
   # image: "docker://ghcr.io/haakaashbee/gha-action/gha-register-build-artifact-action:latest"
-  image: "docker://ghcr.io/haakaashbee/gha-action/gha-register-build-artifact-action:latest"
+  # image: "docker://ghcr.io/haakaashbee/gha-action/gha-register-build-artifact-action:latest"
+  image: "docker://020229604682.dkr.ecr.us-east-1.amazonaws.com/actions/gha-register-build-artifact:main-eee39f71593af31047cd777b317f60adc043dedc"
   env:
     CLOUDBEES_API_URL: ${{ inputs.cloudbees-url }}
     CLOUDBEES_API_TOKEN: ${{ inputs.cloudbees-pat }}
