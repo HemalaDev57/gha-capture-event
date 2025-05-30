@@ -15,7 +15,6 @@ jobs:
       - name: Run My Custom Go Action
         id: artifact
         uses: cloudbees-io-gha/register-build-artifact@v3
-        # uses: ./
         with:
           name: "oidc-artifact-prod"
           version: 1.0.0
