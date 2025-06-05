@@ -1,0 +1,54 @@
+name: GH Workflow 3
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint code
+        run: |
+          echo "Running linter..."
+          sleep 10  
+  test:
+    needs: lint 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          sleep 30   # Slow test suite
+      - name: Run check
+        if: github.event_name == 'pull_request' 
+        run: echo "This never runs."
+
+      - name: Install tool
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cowsay
+          sleep 15   # Simulate slow APT install
+      - name: Use installed tool
+        run: cowsay "Hello!"
+
+  build:
+    needs: test   
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build project
+        run: |
+          echo "Building..."
+          sleep 20 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: |
+          echo "Deploying..."
+          sleep 10
